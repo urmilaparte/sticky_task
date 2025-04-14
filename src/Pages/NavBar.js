@@ -30,7 +30,7 @@ return(
 
 flexGrow: 1,
           p: 3,
-        //   ml: { sm: `${drawerWidth}px` },
+          ml: { sm: `${drawerWidth}px` },
           mt: '64px', 
           backgroundColor: '#f9f9f9',
           minHeight: '100vh',
