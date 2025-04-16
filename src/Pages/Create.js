@@ -13,8 +13,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import NavBar from './NavBar';
 
-const CreateNote = () => {
+// <<<<<<< Updated upstream
+const Create = () => {
   const colors = ['#FFF176', '#81C784', '#64B5F6', '#BA68C8', '#FF8A65'];
 
   const [note, setNote] = useState('');
@@ -60,6 +62,8 @@ const CreateNote = () => {
   };
 
   return (
+    <>
+    <NavBar>
     <Box p={4}>
       <Card sx={{ p: 2, mb: 4 }}>
         <TextField
@@ -147,7 +151,9 @@ const CreateNote = () => {
         ))}
       </Box>
     </Box>
+    </NavBar>
+    </>
   );
 };
 
-export default CreateNote;
+export default Create;

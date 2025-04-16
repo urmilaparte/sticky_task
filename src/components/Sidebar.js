@@ -42,9 +42,9 @@ const Sidebar = ({ drawerWidth, mobileOpen, handleDrawerToggle }) => {
         alignItems="center"
         sx={{ p: 1 }}
       >
-        <IconButton onClick={toggleDrawer}>
+        {/* <IconButton onClick={toggleDrawer}>
           <MenuIcon />
-        </IconButton>
+        </IconButton> */}
       </Box>
 
       <Divider />
