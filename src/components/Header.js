@@ -1,17 +1,17 @@
-// src/components/Header.js
 
 import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useThemeContext } from '../contexts/ThemeProvider'; 
 
 const Header = ({ toggleDrawer }) => {
+  const { toggleTheme } = useThemeContext(); 
+
   return (
     <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        
-        {/* LEFT: Hamburger + Title */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <IconButton
             color="inherit"
@@ -26,16 +26,14 @@ const Header = ({ toggleDrawer }) => {
           </Typography>
         </Box>
 
-        {/* RIGHT: Theme Toggle + Profile */}
         <Box>
-          <IconButton color="inherit">
+          <IconButton color="inherit" onClick={toggleTheme}> 
             <Brightness4Icon />
           </IconButton>
           <IconButton color="inherit">
             <AccountCircleIcon />
           </IconButton>
         </Box>
-
       </Toolbar>
     </AppBar>
   );

@@ -2,11 +2,24 @@
 
 import React from 'react';
 import NavBar from './NavBar';
+import { Box,Typography } from '@mui/material';
 
 function History() {
   return (
     <NavBar>
-      <h2>History of Notes</h2>
+    <Box
+      sx={{
+        backgroundColor: (theme) => theme.palette.background.default,
+        color: (theme) => theme.palette.text.primary,
+        minHeight: '100vh',
+        padding: 2,
+      }}
+    >
+      <Typography variant="h4">Welcome to the History Page</Typography>
+      <Typography>
+        This page now respects the current theme (light/dark)!
+      </Typography>
+    </Box>
     </NavBar>
   );
 }

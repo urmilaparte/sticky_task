@@ -64,7 +64,12 @@ const Create = () => {
   return (
     <>
     <NavBar>
-    <Box p={4}>
+    <Box p={4} sx={{
+        backgroundColor: (theme) => theme.palette.background.default,
+        color: (theme) => theme.palette.text.primary,
+        minHeight: '100vh',
+        padding: 2,
+      }}>
       <Card sx={{ p: 2, mb: 4 }}>
         <TextField
           fullWidth
@@ -157,3 +162,6 @@ const Create = () => {
 };
 
 export default Create;
+
+
+

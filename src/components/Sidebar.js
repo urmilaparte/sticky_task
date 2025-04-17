@@ -87,15 +87,17 @@ const Sidebar = ({ drawerWidth, mobileOpen, handleDrawerToggle }) => {
         variant="permanent"
         sx={{
           display: { xs: 'none', sm: 'block' },
-          '& .MuiDrawer-paper': {
-            width: open ? drawerWidth : '64px',
-            transition: 'width 0.3s ease',
-            overflowX: 'hidden',
-            top: '64px',
-            boxSizing: 'border-box',
-            backgroundColor: '#fff',
-            borderRight: '1px solid #ddd',
-          },
+          '& .MuiDrawer-paper': (theme) => ({
+  width: open ? drawerWidth : '64px',
+  transition: 'width 0.3s ease',
+  overflowX: 'hidden',
+  top: '64px',
+  boxSizing: 'border-box',
+  backgroundColor: theme.palette.background.default,
+  borderRight: `1px solid ${theme.palette.divider}`,
+  color: theme.palette.text.primary,
+}),
+
         }}
         open={open}
       >

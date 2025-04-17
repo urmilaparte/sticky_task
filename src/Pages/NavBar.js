@@ -14,7 +14,17 @@ const DrawerTogg = () => {
 
 return(
  <>
-   <Box  sx={{ display: 'flex' }} >
+   <Box  sx={{ display: 'flex',
+     flexGrow: 1,
+     p: 3,
+     ml: { sm: `${drawerWidth}px` },
+     mt: '64px',
+     backgroundColor: (theme) => theme.palette.background.default,
+     color: (theme) => theme.palette.text.primary, 
+     minHeight: '100vh',
+
+
+    }} >
   <Header
      toggleDrawer={DrawerTogg}
   />
